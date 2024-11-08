@@ -3,675 +3,265 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YouTube-Static</title>
-    <style type = "text/css">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Rohit Kumar</title>
+    <style type="text/css">
+        /* General styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        body{
-            background-color: rgb(13, 13, 13);
-        }
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
 
-        .you_image img{
-            height : 40px;
-            width:120px;
-            margin-left: 20px;
-           
-        }
+/* Header and Navigation */
+header {
+    background-color: #333;
+    color: white;
+    padding: 1rem 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
 
-        header{
-            display:flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .search-bar{
-            display: flex;
-            justify-content: space-between;
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
 
-        }
+nav ul li {
+    margin: 0 20px;
+}
 
-        .search-menu{
-            border: 1px solid white;
-            width: 600px;
-            border-radius: 30px;
-            display:flex;
-            justify-content: space-between;
-            padding: 10px;
-            color: white;
-        }
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
 
-        .bi-list{
-            color:white;
-            font-size: 25px;
-            
-        }
+nav ul li a:hover {
+    text-decoration: underline;
+}
 
-        .bi-mic-fill{
-            align-items: center;
-            color: white;
-            font-size: 25px;
-            border:1px solid gray;
-            border-radius: 50%;
-            padding: 5px;
-            background-color: rgb(194, 123, 123);
-        }
+/* Home Section */
+#home {
+    padding-top: 80px;
+    background-color: #fff;
+    text-align: center;
+    padding: 100px 20px;
+}
 
-        .search-bar{
-            align-items: center;
-        }
+#home h1 {
+    font-size: 2.5rem;
+}
 
-        .menu-bar{
-            display: flex;
-            align-items: center;
-            margin-left: 10px;
-        }
+#home p {
+    font-size: 1.2rem;
+    color: #666;
+}
 
-        .profile_area span{
-            margin-right: 20px;
-            color: white;
-        }
+/* About Section */
+#about {
+    background-color: #f9f9f9;
+    padding: 50px 20px;
+    text-align: center;
+}
 
-        .bi-camera-video{
-            font-size: 25px;
-        }
+#about h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
 
-        .bi-bell{
-            font-size: 25px;
-        }
+#about p {
+    font-size: 1rem;
+    color: #666;
+    max-width: 800px;
+    margin: 0 auto;
+}
 
-        .profile{
-            font-size: 25px;
-            font-family: Arial, Helvetica, sans-serif;
-            border: 1px solid gray;
-            padding: 5px;
-            background-color: gray;
-            border-radius: 50%;
-            
-        }
+/* Projects Section */
+#projects {
+    padding: 50px 20px;
+    text-align: center;
+}
 
-        .mic-section{
-            margin-left: 10px;
-        }
+#projects h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
 
-        section{
-            display: grid;
-            grid-template-columns: 2fr 10fr;
-        }
+.project {
+    background-color: white;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    width: calc(33% - 40px);
+    text-align: center;
+    transition: transform 0.3s;
+}
 
-        ul{
-            list-style: none;
-            color: white;
-            margin-left: -20px;
-        }
+.project:hover {
+    transform: scale(1.05);
+}
 
-        li span{
-            margin-right: 20px;
-        }
+.project img {
+    width: 25px;
+    height: 25px;
+    border-radius: 8px;
+}
 
-        ul li{
-            margin-bottom: 20px;
-        }
+.project h3 {
+    margin-top: 10px;
+    font-size: 1.2rem;
+}
 
-        .youtube-banner{
-            margin-right: 40px;
-            margin-top: 10px;
-        }
+.project p {
+    color: #666;
+}
 
-        .bordera{
-            border-bottom: 1px solid gray;
-        }
+.project .btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+}
 
-        .my-profile{
-            color: white;
-            margin-top: 15px;
-            margin-left: 17px;
-        }
-        
-        .sub{
-            font-weight: bold;
-            color: white;
-            margin-top: 15px;
-            margin-left: 17px;
-        }
+.project .btn:hover {
+    background-color: #555;
+}
 
-        .f-sub{
-            color: white;
-            margin-left: 17px;
-            margin-top: 10px;
-            
-        }
+/* Contact Section */
+#contact {
+    background-color: #f9f9f9;
+    padding: 50px 20px;
+    text-align: center;
+}
 
-        .f-sub span{
-            margin-right: 17px;
-        }
+#contact h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
 
-        .sub-icon{
-            border: 1px solid gray;
-            border: 50%;
-            background-color: gray;
-        }
+#contact form {
+    max-width: 600px;
+    margin: 0 auto;
+}
 
-        .channel{
-            border: 1px solid gray;
-            background-color: gray;
-            color: white;
-            padding: 5px;
-            border-radius: 100%;
+#contact form input,
+#contact form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
 
-        }
+#contact form button {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
 
-        .ab{
-            margin-top: 20px;
-            margin-left: 17px;
-            color: gray;
-        }
+#contact form button:hover {
+    background-color: #555;
+}
 
-       .profile-pic img{
-            width:200px;
-
-       }
-
-
-       article{
-        display:grid;
-        grid-template-columns: 3fr 9fr;
-        color:white;
-
-       }
-
-      
-
-       .profile-content{
-        font-family: Arial, Helvetica, sans-serif;
-        margin-left: 10px;
-        color: lightgray;
-       }
-      
-
-       .profile-content div{
-        margin-top: 15px;
-       }
-    
-
-       .channel-name{
-        font-size: 35px;
-        font-weight: bold;
-        color: white;
-       }
-
-       a{
-        text-decoration: none;
-        color: gray;
-       }
-       b{
-        color: white;
-       }
-     
-
-       .subscribe-button{
-        border:1px solid white;
-        background-color: white;
-        border-radius: 30%;
-       }
-
-
-       .subscribed{
-        background-color: rgb(69, 51, 51);
-        color: white;
-        padding : 5px;
-        width: 150px;
-        border: 1px solid rgb(69, 51, 51);
-        border-radius: 20px;
-        text-align: center;
-
-       }
-
-       .subscribed span{
-        margin-right : 5px;
-       }
-
-
-       .categories{
-        display:flex;
-        font-size: 15px;
-        width : 500px;
-        justify-content: space-evenly;
-        text-transform: capitalize;
-       }
-
-       .nsub{
-        font-size: 25px;
-        margin-top: 15px;
-        color: white;
-       }
-
-       .yt-video{
-        height: 300px;
-        width: 200px;
-        color: white;
-        display: inline-block;
-        margin-right: 30px;
-       }
-
-
-       .yt-vid{
-        height: 300px;
-        width: 200px;
-        color: white;
-        display: inline-block;
-        margin-right: 30px;
-       }
-
-
-       .other_channel{
-        display:flex;
-        color: white;
-        margin-left: 30px;
-       }
-
-       .channel-second{
-        margin-top: 5px;
-        margin-left: 20px;
-        width:500px;
-       }
-
-       .channel-second div{
-        margin-bottom: 10px;
-       }
-
-       .hii{
-        color: gray;
-       }
-
-       .last-button{
-           border: 1px solid white;
-           background-color: #fff;
-        height: 40px;
-        width: 100px;
-        color: #000;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 30px;
-        margin-top: 50px;
-        margin-left: 50px;
-       }
-
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
 
     </style>
-    <link rel="stylesheet" href="../../node_modules/bootstrap-icons/font/bootstrap-icons.css">
 </head>
 <body>
-    
+
     <header>
-        <div class = "menu-bar">
-            <span  class = "bi bi-list"></span>
-            <span class = "you_image"><img src="../public/images/Screenshot 2024-08-19 094337.png" alt=""></span>
-        </div>
-
-
-        <div class = "search-bar">
-
-            <div class = "search-menu">
-                <span>Search</span>
-                
-                <span class = "bi bi-search"></span>
-            </div>
-
-            <div class = "mic-section">
-                <span class = "bi bi-mic-fill"></span>
-            </div>
-        </div>
-
-
-        <div class = "profile_area">
-
-            <span class = "bi bi-camera-video"></span>
-            <span class = "bi bi-bell"></span>
-            <span class = "profile">R</span>
-        </div>
-
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
     </header>
 
-
-
-
-    <section>
-
-
-
-        <nav>
-
-            <ul>
-                <li><span class = "bi bi-house"></span>Home</li>
-                <li><span class = "bi bi-play-circle"></span>Shorts</li>
-                <li><span class = "bi bi-collection-play"></span>Subscriptions</li>
-            </ul>
-
-
-            <div class = "bordera">
-            </div>
-
-            <div class = "my-profile">
-                <span>You</span>
-                <span class = "bi bi-chevron-right"></span>
-            </div>
-
-           
-            <ul>
-                <li><span class = "bi bi-arrow-counterclockwise"></span>History</li>
-                <li><span class = "bi bi bi-music-note-list"></span>Playlists</li>
-                <li><span class = "bi bi-clock"></span>Watch History</li>
-                <li><span class = "bi bi-hand-thumbs-up-fill"></span>Liked Videos</li>
-            </ul>
-
-            <div class = "bordera">
-            </div>
-
-
-            <div class = "sub">Subscriptions</div>
-
-
-
-            
-                
-            <ul>
-                <li><span class = "channel"> f </span>freeCodeCamp</li>
-                <li><span class = "channel">C</span>CodeWithHarry</li>
-                <li><span class = "channel">S</span>Sanket Singh</li>
-                <li><span class = "bi bi-list-ul"></span>All Subscriptions</li>
-                
-            </ul>
-
-            <div class = "bordera">
-            </div>
-
-
-            <div class = "sub">Explore</div>
-
-
-            <ul>
-
-            <li><span class = "bi bi-fire"></span>Trending</li>
-            <li><span class = "bi bi-bag-heart"></span>Shopping</li>
-            <li><span class = "bi bi-music-note"></span>Music</li>
-            <li><span class = "bi bi-cast"></span>Movies</li>
-            <li><span class = "bi bi-broadcast"></span>Live</li>
-            <li><span class = "bi bi-controller"></span>Gaming</li>
-            <li><span class = "bi bi-newspaper"></span>News</li>
-            <li><span class = "bi bi-trophy"></span>Sports</li>
-            <li><span class = "bi bi-lightbulb"></span>Courses</li>
-            <li><span class = "bi bi-bag-heart"></span>Fashion & Beauty</li>
-            <li><span class = "bi bi-broadcast-pin"></span>Podcasts</li>
-            
-
-            </ul>
-            
-
-            <div class = "bordera">
-            </div>
-
-
-
-            <ul>
-                <li><span class = "bi bi-gear"></span>Settings</li>
-                <li><span class = "bi bi-flag-fill"></span>Report History</li>
-                <li><span class = "bi bi-question-circle"></span>Help</li>
-                <li><span class = "bi bi-exclamation-circle-fill"></span>Send Feedback</li>
-                
-            </ul>
-
-
-
-            <div class = "bordera">
-            </div>
-
-
-            <div class = "ab">
-                <span>About</span>
-                <span>Press</span>
-                <span>Copyright</span>
-                <span>Contact Us</span>
-                <span>Creators</span>
-                <span>Advertise</span>
-                <span>Developers</span>
-                
-            </div>
-
-
-            <div class = "ab">
-
-                <span>Terms</span>
-                <span>Privacy</span>
-                <span>Policy and Safety</span>
-                <span>How YouTube Works</span>
-                <span>Test New Features</span>
-               
-
-            </div>
-
-
-            <div class = "ab">
-                <span class = "bi bi-c-circle">2024 Google LLC</span>
-            </div>
-            
-          
-
-        </nav>
-
-
-
-        <main>
-
-            <div class = "youtube-banner">
-                <img src="../public/images/Youtube-Banner.png" alt="" width = 100%>
-            </div>
-
-
-
-            <article >
-
-
-                <div class = "profile-pic">
-                    <img src="../public/images/code_with_harry.png" alt="">
-                </div>
-
-
-
-                <div class = "profile-content">
-                    <div class = "channel-name">
-                    
-                       CodeWithHarry
-
-                    </div>
-
-
-                    <div>
-                        @CodeWithHarry • 6.49M subscribers • 2.3K videos
-                    </div>
-
-
-                    <div>
-                        <a href="javascript:void()">Code With Harry is my attempt to teach basics and those coding techniques to people. <b>...more</b></a> 
-                    </div>
-
-
-                    <div>
-                        <a href="javascript:void()">codewithharry.com <b>and 2 more links</b></a> 
-                    </div>
-
-
-                    <div class = "subscribed">
-                        <span class = "bi bi-bell"></span>
-
-                        <span>
-                            Subscribed
-                        </span>
-
-                        
-                        
-                        <span class = "bi bi-chevron-right">
-
-                        </span>
-
-                    </div>
-
-                </div>
-
-
-            </article>
-
-
-
-            <nav>
-                <ul class = "categories" >
-                    <li>Home</li>
-                    <li>Videos</li>
-                    <li>Shorts</li>
-                    <li>Live</li>
-                    <li>Playlists</li>
-                    <li>Community</li>
-                    <li class = "bi bi-search"></li>
-                    
-                </ul>
-            </nav>
-
-
-
-
-            <div class = "bordera">
-            </div>
-
-
-            <div class = "nsub">
-                Videos
-            </div>
-
-            <div class = "container">
-
-            <div class="yt-video">
-                
-            <iframe width="220" height="130" src="https://www.youtube.com/embed/lv7ka-8FscI" frameborder="0">  </iframe>
-                <p>Python vs JavaScript | What to Choose? | ft. Toolify.ai</p>
-                <p><span>10K views</span><span>. 2hours ago</span></p>
-            </div>
-
-            <div class="yt-video">
-
-        
-                <iframe width="220" height = "130" src="https://www.youtube.com/embed/DAxKQIG4T2Y"   frameborder="0" ></iframe>
-            
-                <p>Python vs JavaScript | What to Choose? | ft. Toolify.ai</p>
-                <p><span>10K views</span><span>. 2hours ago</span></p>
-            </div>
-                    
-
-            <div class="yt-video">
-
-                
-                <iframe width="220" height = "130" src="https://www.youtube.com/embed/68PxhlaFFR4"   frameborder="0" ></iframe>
-            
-                <p>Python vs JavaScript | What to Choose? | ft. Toolify.ai</p>
-                <p><span>10K views</span><span>. 2hours ago</span></p>
-            </div>
-
-            <div class="yt-video">
-
-                
-                <iframe width="220" height = "130" src="https://www.youtube.com/embed/8ppBHEiFgwA"   frameborder="0" ></iframe>
-            
-                <p>Python vs JavaScript | What to Choose? | ft. Toolify.ai</p>
-                <p><span>10K views</span><span>. 2hours ago</span></p>
-            </div>
-
-            
-
-          </div>
-            
-
-          
-          <div class = "bordera">
+    <section id="home">
+        <div class="container">
+            <h1>Hello, I am Rohit Kumar</h1>
+            <p>I am a frontend web developer, designer, and tech enthusiast.</p>
         </div>
-
-           
-        <div class = "nsub">
-            Shorts
-        </div>
-
-
-        <div class = "container">
-
-
-
-            <div class="yt-vid">
-                
-                <iframe width="220" height="130" src="https://www.youtube.com/embed/1jb5_1I-98A" frameborder="0">  </iframe>
-                    <p>Python vs JavaScript | What to Choose? | ft. Toolify.ai</p>
-                    <p><span>10K views</span><span>. 2hours ago</span></p>
-                </div>
-    
-                <div class="yt-vid">
-    
-            
-                    <iframe width="220" height = "130" src="https://www.youtube.com/embed/sWZhzxAuSbI"   frameborder="0" ></iframe>
-                
-                    <p>Python vs JavaScript | What to Choose? | ft. Toolify.ai</p>
-                    <p><span>10K views</span><span>. 2hours ago</span></p>
-                </div>
-                        
-    
-                <div class="yt-vid">
-    
-                    
-                    <iframe width="220" height = "130" src="https://www.youtube.com/embed/t-CVj7pY_Ek"   frameborder="0" ></iframe>
-                
-                    <p>Python vs JavaScript | What to Choose? | ft. Toolify.ai</p>
-                    <p><span>10K views</span><span>. 2hours ago</span></p>
-                </div>
-    
-                <div class="yt-vid">
-    
-                    
-                    <iframe width="220" height = "130" src="https://www.youtube.com/embed/nofh18L_CEU"   frameborder="0" ></iframe>
-                
-                    <p>Python vs JavaScript | What to Choose? | ft. Toolify.ai</p>
-                    <p><span>10K views</span><span>. 2hours ago</span></p>
-                </div>
-    
-
-
-        </div>
-
-        <div class = "bordera">
-        </div>
-
-               
-        <div class = "nsub">
-            All me :)
-        </div>
-
-
-        <div class = "other_channel">
-
-            <div>
-                <img src="../public/images/Pro_with_harry.png" alt="" height = "150" width = "150">
-
-            </div>
-
-            
-
-            <div class = "channel-second">
-                <div><h1>ProgrammingWithHarry</h1></div>
-                <div class = "hii">@ProgrammingWithHarry•258K subscribers</div>
-                <div class = "hii">Programming With Harry is a place where you can learn various concepts related to programming for free. ProgrammingWithHarry is a beginner friendly place for you</div>
-            </div>
-
-            <div class = "last-button">Subscribe</div>
-
-        </div>
-
-
-
-
-        </main>
     </section>
+
+    <section id="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>
+                I am a passionate web developer with experience in building responsive and user-friendly websites.
+                I love working with technologies like HTML, CSS, JavaScript, and frameworks like React and Node.js.
+            </p>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="container">
+            <h2>My Projects</h2>
+            <div class="project">
+                <img src="youtube.jpeg" alt="Project 1">
+                <h3>Project 1</h3>
+                <p>I have built a static YouTube page of CodeWithHarry using HTML and CSS.</p>
+                <a href="#" class="btn">View Project</a>
+            </div>
+            <div class="project">
+                <img src="to__do.jpeg" alt="Project 2">
+                <h3>Project 2</h3>
+                <p>This is my to do application which I have built using HTML, CSS and JavaScript.</p>
+                <a href="#" class="btn">View Project</a>
+            </div>
+            <!-- Add more projects here -->
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <form id="contact-form">
+                <input type="text" id="name" placeholder="Your Name" required>
+                <input type="email" id="email" placeholder="Your Email" required>
+                <textarea id="message" placeholder="Your Message" required></textarea>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Rohit Kumar. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script> 
+
 </body>
 </html>
